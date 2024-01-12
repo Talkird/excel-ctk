@@ -27,7 +27,7 @@ class TitleBar(ctk.CTkFrame):
             xwin = xwin - startx
 
             def move_window(event):
-                master.geometry("400x280" + '+{0}+{1}'.format(event.x_root + xwin, event.y_root + ywin))
+                master.geometry("600x300" + '+{0}+{1}'.format(event.x_root + xwin, event.y_root + ywin))
                 startx = event.x_root
                 starty = event.y_root
 

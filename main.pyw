@@ -7,7 +7,7 @@ from theme import Theme
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.geometry("400x280")
+        self.geometry("600x300")
         self.resizable(False, False)
         self.title("Automatizacor Excel")
         self.overrideredirect(True)

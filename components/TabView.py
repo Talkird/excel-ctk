@@ -8,7 +8,8 @@ class TabView(ctk.CTkTabview):
         #create tabs
         self.add("Contrato")
         self.add("Licencia")
-        self.add("Impl")
+        self.add("Implementación")
+        self.add("Monitoreo")
         self.add("Finalizar")
 
         #Contrato
@@ -19,7 +20,13 @@ class TabView(ctk.CTkTabview):
 
         #Licencia
         self.text_horas = Entry(master=self.tab("Licencia"), text="EPS").pack(anchor="w", padx=10, pady=5)
-        self.text_horas1 = Entry(master=self.tab("Licencia"), text="Margen").pack(anchor="w", padx=10, pady=5)
+        self.margen = Entry(master=self.tab("Licencia"), text="Margen").pack(anchor="w", padx=10, pady=5)
+
+        #Impl
+        self.text_horas1 = Entry(master=self.tab("Implementación"), text="Horas").pack(anchor="w", padx=10, pady=5)
+        self.experto = ctk.CTkComboBox(master=self.tab("Implementación"), values=["Experto1", "Experto2", "Experto3", "Experto4"]).pack(anchor="w", padx=10, pady=5)
+
+        #
 
         self._segmented_button.configure(font=("Roboto", 16))
 
