@@ -3,6 +3,7 @@ from widgets.Entry import Entry
 from widgets.Button import Button
 from widgets.Label import Label
 from widgets.ComboBox import ComboBox
+from widgets.RadioButton import RadioButton
 from theme import Theme
 
 class TabView(ctk.CTkTabview):
@@ -42,6 +43,12 @@ class TabView(ctk.CTkTabview):
         
         self.label_horas_impl = Label(master=self.tab("Implementación"), text="Horas de trabajo").grid(sticky="w", row=1, column=0, padx=10, pady=5)
         self.horas_impl = Entry(master=self.tab("Implementación"), text="Horas").grid(sticky="w", row=1, column=1, padx=10, pady=5)
+
+        #Monitoreo
+        radio_var = ctk.StringVar()
+        self.radio_diurno = RadioButton(master=self.tab("Monitoreo"), text="Diurno", value="diurno", variable=radio_var, command=None).grid(sticky="w", row=0, column=0, padx=10, pady=5)
+        self.radio_nocturno = RadioButton(master=self.tab("Monitoreo"), text="Nocturno", value="nocturno", variable=radio_var, command=None).grid(sticky="w", row=1, column=0, padx=10, pady=5)
+        self.radio_completo = RadioButton(master=self.tab("Monitoreo"), text="24x7", value="completo", variable=radio_var, command=None).grid(sticky="w", row=2, column=0, padx=10, pady=5)
 
         #Finalizar
         self.button_finalizar = Button(master=self.tab("Finalizar"), text="Finalizar", command=lambda: print("test")).pack(anchor="w", padx=10, pady=5)
