@@ -47,7 +47,3 @@ class TabView(ctk.CTkTabview):
         self.button_finalizar = Button(master=self.tab("Finalizar"), text="Finalizar", command=lambda: print("test")).pack(anchor="w", padx=10, pady=5)
 
         self._segmented_button.configure(font=Theme.font, selected_color=Theme.accent, selected_hover_color=Theme.accent_hover)
-
-
-    def calcular_licencia(EPS: int) -> float:
-        pass
