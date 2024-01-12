@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from components.Frame import Frame
 from components.TitleBar import TitleBar
+from components.TabView import TabView
 from theme import Theme
 
 class App(ctk.CTk):
@@ -13,9 +14,9 @@ class App(ctk.CTk):
         self.attributes('-topmost', True)
         self.attributes('-alpha', 0.95)
 
-        #widgets
         self.title_bar = TitleBar(master=self, title="Automatizador Excel")
-        self.frame = Frame(master=self)
+        self.tab_view = TabView(master=self).pack(fill="both", expand=True, padx=15, pady=15)
+        #self.frame = Frame(master=self)
 
 ctk.set_default_color_theme("green")
 app = App()
