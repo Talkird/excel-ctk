@@ -1,4 +1,0 @@
-experto1=10
-experto2=20
-experto3=35
-
